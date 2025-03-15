@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api:
+    image: student-api  # Utilisation de l'image créée précédemment
+    container_name: api-student
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./simple_api/student_age.json:/data/student_age.json
+    networks:
+      - student_network
+
+  web:
+    image: php:apache
+    container_name: web-student
+    ports:
+      - "8080:80"
+    volumes:
+      - ./website:/var/www/html
+    environment:
+      API_USERNAME: "toto"
+      API_PASSWORD: "python"
+    depends_on:
+      - api
+    networks:
+      - student_network
+
+networks:
+  student_network:
+    driver: bridge
