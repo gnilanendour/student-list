@@ -1,1 +1,7 @@
-Il y'a un fichier readme.pdf contenant les captures et les explications , pour voir le fichier README.pdf il faut taper sur Update README.md
+
+1- le fichier Dockerfile se trouve dans le dossier simple_api
+
+2- le fichier README.pdf contient l'ensemble des capture et des explications.
+Si Vous n'arrivez pas a l'ouvrir directement, vous pouvez le voir en commentaire si vous taper sur Update README.md
+
+
